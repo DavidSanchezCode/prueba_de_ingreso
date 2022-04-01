@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from routs.user import user 
 app = FastAPI()
-@app.get('/')
-def home():
-    return{"hello": "world"}
+app.include_router(user)
 
 
